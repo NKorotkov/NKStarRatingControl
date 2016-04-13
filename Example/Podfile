@@ -1,12 +1,12 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-target 'NKStarRatingControl_Example', :exclusive => true do
-  pod 'NKStarRatingControl', :path => '../'
-end
-
-target 'NKStarRatingControl_Tests', :exclusive => true do
+target 'NKStarRatingControl_Example' do
   pod 'NKStarRatingControl', :path => '../'
 
-  
+  target 'NKStarRatingControl_Tests' do
+    inherit! :search_paths
+
+  end
 end
+
